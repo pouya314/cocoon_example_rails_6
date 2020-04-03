@@ -31,6 +31,16 @@
 	  </div>
   </div>
 
+  <h3>Members</h3>
+  <div id="members">
+	  <%= form.fields_for :members do |member| %>
+	  	<%= render 'member_fields', f: member %>
+	  <% end %>
+	  <div class="links">
+		  <%= link_to_add_association 'add member', form, :members %>	  	
+	  </div>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
