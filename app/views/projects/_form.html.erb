@@ -21,6 +21,13 @@
     <%= form.text_field :description %>
   </div>
   
+  <h3>Purpose</h3>
+  <div id="purpose">
+	  <%= form.fields_for :purpose do |purpose| %>
+	  	<%= render 'purpose_fields', f: purpose %>
+	  <% end %>
+  </div>
+  
   <h3>Tasks</h3>
   <div id="tasks">
 	  <%= form.fields_for :tasks do |task| %>

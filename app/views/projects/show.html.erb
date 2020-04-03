@@ -10,12 +10,19 @@
   <%= @project.description %>
 </p>
 
+<p><strong>Purpose</strong></p>
+<div id="purpose">
+	<%= @project.purpose.name %>
+</div>
+
+<p><strong>Tasks</strong></p>
 <div id="tasks">
 	<% for task in @project.tasks %>
 		- <%= task.description %> | Done? <%= task.done %><br/>
 	<% end %>
 </div>
 
+<p><strong>Members</strong></p>
 <div id="members">
 	<% for member in @project.members %>
 		- <%= member.name %><br/>
