@@ -70,3 +70,6 @@ end
 		- <%= task.description %> | Done? <%= task.done %><br/>
 	<% end %>
 </div>
+
+Sortable JS lib:
+https://github.com/SortableJS/Sortable

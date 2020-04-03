@@ -27,3 +27,22 @@
 <br>
 
 <%= link_to 'New Project', new_project_path %>
+<br/>
+<br/>
+<ul id="items">
+	<li>item 1</li>
+	<li>item 2</li>
+	<li>item 3</li>
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+	var el = document.getElementById('items');
+	// var sortable = Sortable.create(el);
+	var sortable = new Sortable(el, {
+		// Changed sorting within list
+		onUpdate: function (/**Event*/evt) {
+			console.log("onUpdate called!");
+		},
+	});
+</script>
